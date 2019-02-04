@@ -93,7 +93,8 @@ html, body {
     font-size: 13px;
     display: flex;
     font-weight: 400;
-    margin-left: 18px; }
+    margin-left: 18px;
+    position: relative; }
     .form label.checkbox p {
       padding-left: 7px; }
     .form label.checkbox a {
@@ -115,6 +116,23 @@ html, body {
     margin-left: auto;
     font-weight: 700;
     text-transform: uppercase; }
+
+#PWZ-error, #birthday-error, #tel-error, #city-error, #agree-error {
+  color: #ff002a;
+  font-family: Lato;
+  font-size: 13px;
+  font-weight: 400;
+  padding-top: 12px;
+  display: inline-block; }
+
+#agree-error {
+  position: absolute;
+  bottom: -22px;
+  width: 160px;
+  left: 19px; }
+
+input.error {
+  border: 1px solid #ff0000 !important; }
 
 @media only screen and (max-width: 590px) {
   .form .form-input {
