@@ -6,8 +6,9 @@
 	<title>Protokoły Chemioterapii</title>
 	<link rel="stylesheet" href="css/form.css">
 	<link rel="stylesheet" type="text/css" href="css/DateTimePicker.css" />
-	<link rel="stylesheet" type="text/css" href="css/jquery-ui-1.10.1.css" />
-
+    <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="css/latoja.datepicker.css" />
+    <link rel="stylesheet" type="text/css" href="css/jquery-ui-1.10.1.css" />
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
 	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
@@ -65,7 +66,7 @@
 			<input type="text" id="city" name="city" placeholder="Podaj miasto">
 
 		</div>
-		<label class="checkbox"><input type="checkbox" id="agree" name="agree"><p> Akceptuję&nbsp;<a href="" target="_blank">regulamin</a>&nbsp;korzystania z usługi oraz Politykę Prywatności aplikacji</p></label>
+		<label class="checkbox"><input type="checkbox" id="agree" name="agree"><p> Akceptuję&nbsp;<a href="https://protokolychemioterapii.pl/wp-content/uploads/2019/05/Regulamin-oraz-polityka-prywatności.pdf" target="_blank">regulamin</a>&nbsp;korzystania z usługi oraz <a href="https://protokolychemioterapii.pl/wp-content/uploads/2019/05/Regulamin-oraz-polityka-prywatności.pdf" target="_blank">politykę prywatności</a> aplikacji</p></label>
 
 		<label class="checkbox rodo"><input type="checkbox" id="rodo" name="rodo"><p> Zapoznałem się z <a href="/pdf/informacja_o_administratorze_i_przetwarzaniu_danych.pdf" target="_blank">informacja</a> o administratorze i przetwarzaniu danych.</p></label>
 		<input type="submit" value="Przejdź dalej">
@@ -85,6 +86,18 @@
 <!--	</script>-->
 
 	<script>
+        $.datepicker.regional['pl'] = {clearText: 'Effacer', clearStatus: '',
+
+            currentText: 'Huidige', currentStatus: 'Bekijk de huidige maand',
+            monthNames: ["Styczeń", "Luty", "Marzec", "Kwiecień", "Maj", "Czerwiec", "Lipiec", "Sierpień", "Wrzesień", "Październik", "Listopad", "Grudzień"],
+            monthNamesShort: ["Styczeń", "Luty", "Marzec", "Kwiecień", "Maj", "Czerwiec", "Lipiec", "Sierpień", "Wrzesień", "Październik", "Listopad", "Grudzień"],
+            weekHeader: 'Sm', weekStatus: '',
+            days: ["Niedziela", "Poniedziałek", "Wtorek", "Środa", "Czwartek", "Piątek", "Sobota"],
+            dayNamesShort: ["Ndz.", "Pn.", "Wt.", "Śr.", "Czw.", "Pt.", "Sob."],
+            dayNamesMin: ["Ndz.", "Pn.", "Wt.", "Śr.", "Czw.", "Pt.", "Sob."],
+            dateFormat: 'yy-mm-dd',
+            initStatus: 'Kies een datum', isRTL: false};
+        $.datepicker.setDefaults($.datepicker.regional['pl']);
 		$( function() {
 			$( "#datepicker" ).datepicker({
 				changeMonth: true,
